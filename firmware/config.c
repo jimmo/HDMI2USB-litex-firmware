@@ -37,8 +37,8 @@ static const unsigned char config_defaults[CONFIG_KEY_COUNT] = {
 	EDID_SECONDARY_MODE_OFF,        // Secondary
 #else
 	// EDID Config
-	PROCESSOR_MODE_720p_50, // Primary
-	PROCESSOR_MODE_720p_60, // Secondary
+	PROCESSOR_MODE_720p_60, // Primary
+	PROCESSOR_MODE_720p_50, // Secondary
 #endif
 	// Input config
 	false, // Input0
