@@ -21,7 +21,7 @@ void reboot(void)
 
 void __attribute__((noreturn)) boot(unsigned int r1, unsigned int r2, unsigned int r3, unsigned int addr)
 {
-	printf("Booting program at 0x%x.\n", addr);
+	printf("Booting program at 0x%x.\r\n", addr);
 	uart_sync();
 	irq_setmask(0);
 	irq_setie(0);

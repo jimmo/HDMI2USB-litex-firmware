@@ -47,7 +47,7 @@ void bist_test(void) {
 			speed = SYSTEM_CLOCK_FREQUENCY/ticks;
 			speed = test_size*speed/1000000;
 			speed = 8*speed;
-			printf(" / %u Mbps\n", speed);
+			printf(" / %u Mbps\r\n", speed);
 
 			// read
 			printf("reading %d Mbytes...", test_size/(1024*1024));
@@ -69,14 +69,14 @@ void bist_test(void) {
 			speed = SYSTEM_CLOCK_FREQUENCY/ticks;
 			speed = test_size*speed/1000000;
 			speed = 8*speed;
-			printf(" / %u Mbps\n", speed);
+			printf(" / %u Mbps\r\n", speed);
 
 			// errors
 #ifdef CSR_CHECKER_ERR_COUNT_ADDR
-			printf("errors: %d\n", checker_err_count_read());
+			printf("errors: %d\r\n", checker_err_count_read());
 #endif
 #ifdef CSR_CHECKER_ERRORS_ADDR
-			printf("errors: %d\n", checker_errors_read());
+			printf("errors: %d\r\n", checker_errors_read());
 #endif
 
 			// delay
