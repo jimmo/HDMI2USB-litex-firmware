@@ -89,7 +89,7 @@ int mdio_read(int phyadr, int reg)
 void mdio_dump(void) {
 	int i;
 	for(i=0; i<32; i++)
-		wprintf("reg %d: %04x\n", i, mdio_read(0, i));
+		wprintf("reg %d: %04x\r\n", i, mdio_read(0, i));
 }
 
 int mdio_status(void) {
@@ -122,7 +122,7 @@ int mdio_status(void) {
 		wprintf("up");
 	else
 		wprintf("down");
-	wprintf("\n");
+	wprintf("\r\n");
 	return 0;
 }
 

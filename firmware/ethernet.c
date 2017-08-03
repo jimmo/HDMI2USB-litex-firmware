@@ -44,7 +44,7 @@ void ethernet_init(const unsigned char * mac_addr, const unsigned char *ip_addr)
 	uip_ipaddr(&ipaddr, ip_addr[0], ip_addr[1], ip_addr[2], ip_addr[3]);
 	uip_sethostaddr(&ipaddr);
 
-	printf("uIP init done with ip %d.%d.%d.%d\n", ip_addr[0], ip_addr[1], ip_addr[2], ip_addr[3]);
+	printf("uIP init done with ip %d.%d.%d.%d\r\n", ip_addr[0], ip_addr[1], ip_addr[2], ip_addr[3]);
 }
 
 void ethernet_service(void) {

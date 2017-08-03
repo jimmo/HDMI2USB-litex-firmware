@@ -19,7 +19,7 @@ void etherbone_init(void)
 		etherbone_tx_buf, ETHERBONE_BUFFER_SIZE_TX,
 		(tcp_socket_data_callback_t) etherbone_callback, NULL);
 	tcp_socket_listen(&etherbone_socket, ETHERBONE_PORT);
-	printf("Etherbone listening on port %d\n", ETHERBONE_PORT);
+	printf("Etherbone listening on port %d\r\n", ETHERBONE_PORT);
 }
 
 void etherbone_write(unsigned int addr, unsigned int value)
