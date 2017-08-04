@@ -14,9 +14,13 @@ int wputs(const char *s)
 #ifdef ETHMAC_BASE
 	if(telnet_active)
 		telnet_puts(s);
-	else
+	else {
 #endif
 		puts(s);
+		putchar('\r');
+#ifdef ETHMAC_BASE
+	}
+#endif
 	return 0;
 }
 
